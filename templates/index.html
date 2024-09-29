@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Random Restaurant Picker</title>
+    <!-- Include the CSS file -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Click the button to get a random restaurant!</h1>
+
+    <!-- Display area for the restaurant -->
+    <p class="restaurant" id="restaurantDisplay"></p>
+
+    <!-- Button to get a random restaurant -->
+    <button id="getRestaurantButton">Get Random Restaurant</button>
+
+    <!-- Pass the URL to the external JavaScript file -->
+    <script type="text/javascript">
+        var getRestaurantUrl = "{{ url_for('get_restaurant') }}";
+    </script>
+
+    <!-- Include the external JavaScript file -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
