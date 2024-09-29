@@ -26,4 +26,4 @@ def get_restaurant():
     return jsonify({'restaurant': random_restaurant})
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False)
